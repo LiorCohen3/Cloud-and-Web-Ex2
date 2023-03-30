@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+        <link rel="icon" href="images/art.png">
+        <title>Lior Cohen Web and Cloud</title>
+    </head>
+    <body>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <header>
+            <!-- Logo -->
+            <a href="#" id="logo"></a>
+            <a href="#" id="logo_text">L I O R&nbsp;&nbsp;C O H E N</a>
+        </header>
+
+
+
+        <main>
+            <section class="Cover">
+                <!-- Cover -->
+                <img id="image1" src="images/Rectangle 5.png" alt="">
+                <img id="image2" src="images/lior.png" width="300" height="300">
+                <h1>Welcome to My Museum</h1>
+                <h2>Please do not touch or move any of the art pieces</h2>
+            </section>
+
+
+            <section class="About">
+                <!-- About -->
+                <h2>About</h2>
+                <p>Hello, my name is Lior and I'm a 2nd year software engineer student.<br>
+                I work as an automation engineer at Marvell for the past 3 years.</p>
+            </section>
+
+
+            <section class="Exercises">
+                <!-- Exercises -->
+                <h2>Exercises:</h2>
+                <div class="card-container">
+                    <div class="card card1">
+
+                        <img src="images/ex1icon.png">
+                        <h2>Exercise 1</h2>
+                        <a class="button button1" href="exercises/ex1/index.html" target="_blank">View</a>
+                    </div>
+                    <div class="card card2">
+                        <img src="images/ex2icon.png">
+                        <h2>Exercise 2</h2>
+                        <a class="button button2" href="#">View</a>
+                    </div>
+                    <div class="card card3">
+                        <img src="images/ex3icon.png">
+                        <h2>Exercise 3</h2>
+                        <a class="button button3" href="#">View</a>
+                    </div>
+                    <div class="card card4">
+                        <img src="images/ex4icon.png">
+                        <h2>Exercise 4</h2>
+                        <a class="button button4" href="#">View</a>
+                    </div>
+                    <div class="card card5">
+                        <img src="images/ex5icon.png">
+                        <h2>Exercise 5</h2>
+                        <a class="button button5" href="#">View</a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="ProgrammingLanguages">
+                <!-- Programming Languages -->
+                <h2>Programming Languages</h2>
+                <br>
+                <ul>
+                    <li>Html</li>
+                    <li>Css</li>
+                    <li>Java Script</li>
+                    <li>C++</li>
+                    <li>Python</li>
+                </ul>
+            </section>
+
+
+            <section class="YourChoice">
+                <!-- Your Choice -->
+                <h2><br>My Git Repositories</h2>
+                <br>
+                <ul id="repos-list"></ul>
+                <script>
+                    const accessToken = "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";
+                    const apiUrl = "https://api.github.com/users/LiorCohen3/repos";
+
+                    fetch(apiUrl, {
+                    headers: {
+                    Authorization: `token ${accessToken}`
+                    }
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                    const reposList = document.getElementById("repos-list");
+                    data.forEach(repo => {
+                        const li = document.createElement("li");
+                        li.className = "repo-card";
+                        const name = document.createElement("div");
+                        name.className = "repo-name";
+                        name.innerText = repo.name;
+                        li.appendChild(name);
+                        const desc = document.createElement("div");
+                        desc.className = "repo-desc";
+                        desc.innerText = repo.description || "No description available.";
+                        li.appendChild(desc);
+                        const viewButton = document.createElement("button");
+                        viewButton.className = "view-button";
+                        viewButton.innerText = "View";
+                        viewButton.addEventListener("click", () => {
+                        window.open(repo.html_url, "_blank");
+                        });
+                        li.appendChild(viewButton);
+                        reposList.appendChild(li);
+                    });
+                    })
+                    .catch(error => console.error(error));
+                </script>
+            </section>
+        </main>
+        <footer>
+            <h4>Follow Me</h4>
+            <a href="https://www.linkedin.com/in/lior-cohens/">Linkdin</a>
+            <a href="https://www.instagram.com/lior_cohenos/?igshid=YmMyMTA2M2Y%3D">Instagram</a>
+            <a href="https://www.instagram.com/shenkar.se">Shenkars's Instagram</a>
+            <p>&copy; Lior Cohen 2023</p>
+        </footer>
+    </body>
+</html>

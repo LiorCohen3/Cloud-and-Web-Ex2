@@ -1,0 +1,361 @@
+* {margin:0; padding:0;}
+
+header, main, footer, nav, aside, section {
+    display: block;
+}
+
+body {
+    position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    background: #ffffff;
+}
+
+h1 {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 60px;
+
+    color: #000000;
+}
+
+h2 {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+
+    color: #000000;
+}
+
+h4 {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: bold;
+    margin-bottom: 20px; /* add a blank line after the h4 */
+}
+a {
+    text-decoration: none;
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: bold;
+    color: #000000;
+
+}
+
+header {
+    width: 100%;
+}
+#logo_text {
+    position: relative;
+    left: 78px;
+    top: 15px;
+}
+#logo {
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 40px;
+    top: 41px;
+
+    display: block;
+}
+
+.Cover {
+    position: absolute;
+    width: 100%;
+    height: 555px;
+    left: 0px;
+    top: 123px;
+
+    background-color: #F9BDBD;
+}
+
+.Cover h1{
+    position: absolute;
+    width: 448px;
+    height: 98px;
+    left: 506px;
+    top: 146px;
+}
+
+.Cover h2{
+    position: absolute;
+    width: 448px;
+    height: 66px;
+    left: 506px;
+    top: 280px;
+}
+
+.About {
+    position: absolute;
+    width: 741px;
+    height: 458px;
+    left: 40px;
+    top: 702px;
+}
+
+.Exercises {
+    position: absolute;
+    width: 100%;
+    left: 40px;
+    top: 1243px;
+}
+
+.ProgrammingLanguages {
+    position: absolute;
+    width: 364px;
+    height: 205px;
+    left: 40px;
+    top: 1611px;    
+}
+
+.YourChoice {
+    position: absolute;
+    width: 1120px;
+    height: 572px;
+    left: 40px;
+    top: 1856px;
+}
+
+p {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140.62%;
+    display: inline;
+
+    text-align: justify;
+
+    color: #000000;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    top: 2699px;
+    padding: 30px;
+
+    background-color: #d5d5d5;
+}
+footer a{
+    display: block;
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px; /* add a blank line after the h4 */
+
+    color: #8D8D8D
+}
+footer p{
+    display: block;
+    margin-top: 20px;
+    color: #8D8D8D
+}
+
+.card-container {
+    display: flex; /* Set display property to flex */
+}
+
+.card {
+    border-radius: 15px;
+    padding: 20px;
+    margin-right: 15px;
+    width: 15%;
+    height: 264px;
+    position: relative; /* Make the card position relative */
+}
+
+.card.card1 {
+    background-image: url("../images/back1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card.card2 {
+    background-image: url("../images/back2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card.card3 {
+    background-image: url("../images/back3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card.card4 {
+    background-image: url("../images/back4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card.card5 {
+    background-image: url("../images/back5.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    border-radius: 4px;
+    margin: 10px; /* Add some margin to the image */
+}
+
+.card h2 {
+    margin-top: 80px; /* Add some margin to the h2 tag */
+    font-size: 20px;
+}
+
+.card .button {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    color: #171F46;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    transition: all 0.3s ease;
+}
+
+.card:hover .button {
+    background-color: #171F46;
+}
+.card:hover .button.button1 {
+    color: #fdede5; /* Change the font color to the card color */
+}
+
+.card:hover .button.button2 {
+    color: #ebf1ff; /* Change the font color to the card color */
+}
+
+.card:hover .button.button3 {
+    color: #ebffec; /* Change the font color to the card color */
+}
+
+.card:hover .button.button4 {
+    color: #ffebfc; /* Change the font color to the card color */
+}
+
+.card:hover .button.button5 {
+    color: #fffeeb; /* Change the font color to the card color */
+}
+
+.ProgrammingLanguages ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 20px;
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140.62%;
+    text-align: justify;
+
+    color: #000000;
+}
+
+.ProgrammingLanguages li {
+    margin: 10px 0;
+    padding-left: 25px;
+    background-image: url('../images/html5.png');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 20px 20px;
+}
+.ProgrammingLanguages li:nth-child(2) {
+    background-image: url('../images/css.png');
+}
+.ProgrammingLanguages li:nth-child(3) {
+    background-image: url('../images/js.png');
+}
+.ProgrammingLanguages li:nth-child(4) {
+    background-image: url('../images/c++.png');
+}
+.ProgrammingLanguages li:nth-child(5) {
+    background-image: url('../images/python.png');
+}
+
+#image1 {
+    position: absolute;
+    width: 278px;
+    height: 388px;
+    left: 40px;
+    top: 126px;
+}
+
+#image2 {
+    position: absolute;
+    left: 78px;
+    top: 168px;
+}
+
+#repos-list {
+    font-family: 'Alef';
+    font-style: normal;
+    font-weight: bold;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+.repo-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.repo-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.repo-desc {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+.repo-url {
+    font-size: 1rem;
+    color: blue;
+    text-decoration: none;
+}
+.view-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(56, 56, 56);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.view-button:hover {
+    background-color: darkblue;
+}
